@@ -24,7 +24,7 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
         endPoint: "volumes?q=subject:action&orderBy:newest");
     var result = BookModel.fromJson(data);
     List<BookEntities> books = result.items?.toList() ?? [];
-    saveBoxData(books, kFutureBox);
+    saveBoxData(books, kNewestBox);
     return books;
   }
 }

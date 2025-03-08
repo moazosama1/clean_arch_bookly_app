@@ -7,9 +7,11 @@ import 'package:hive_flutter/adapters.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const Bookly());
+  await Hive.initFlutter();
   Hive.registerAdapter(BookEntitiesAdapter());
   await Hive.openBox(kFutureBox);
+  await Hive.openBox(kNewestBox);
+  runApp(const Bookly());
 }
 
 class Bookly extends StatelessWidget {
