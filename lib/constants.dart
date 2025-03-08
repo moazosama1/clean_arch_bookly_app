@@ -5,3 +5,4 @@ const kTranstionDuration = Duration(milliseconds: 250);
 const kGtSectraFine = 'GT Sectra Fine';
 const kFutureBox = "future_box";
 const kNewestBox = "newest_box";
+const kCommonError = "There was an error, please try again.";
